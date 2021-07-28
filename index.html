@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Create By Ricch_Kraft-->
+<head>
+   <!-- Meta Tags -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <title>Image Slider Website Using HTML And CSS - Ricch Kraft</title>
+
+   <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body onload="slider()">
+    <div class="hero">
+        <div class="slider">
+            <img src="./Image/image1.jpg" id="slideImg">
+        </div>
+        <div class="overlane">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./Image/logo1.png" />
+                </div>
+                <div class="menu_icon">
+                    <a href=""><img src="./Image/user.png"></a>
+                    <a href=""><img src="./Image/loupe.png"></a>
+                    <a href=""><img src="./Image/help.png"></a>
+                    <a href=""><img src="./Image/menu.png"></a>
+                </div>
+            </div>
+
+            <div class="col">
+                <h1>LET'S START TO DESIGN</h1>
+                <h3>Subscribe To Ricch Kraft Youtube Channel To Watch More Video, Press The Bell Icon To Get Latest Updates.</h3>
+
+                <div>
+                    <button type="button">Watch more</button>
+                    <button type="button" class="btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var slideImg = document.getElementById("slideImg");
+
+        var Image = new Array(
+            "Image/image1.jpg",
+            "Image/img2.jpg",
+            "Image/image3.jpg",
+            "Image/image4.jpg"    
+           );
+        
+        var len = Image.length;
+        var i = 0;   
+
+        function slider(){
+            if(i > len-1){
+                i = 0;
+            }
+            slideImg.src = Image[i];
+            i++;
+            setTimeout('slider()',3000);
+        }
+    </script>
+
+    
+</body>
+</html>
